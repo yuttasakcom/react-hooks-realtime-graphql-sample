@@ -1,0 +1,28 @@
+{
+  "name": "geopins-final-code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Yuttasak Pannawat <yuttasakcom@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "server": "env-cmd ./.env.dev nodemon server.js --exec babel-node",
+    "client": "cd client && yarn start",
+    "dev": "concurrently --name \"server,client\" \"yarn server\" \"yarn client\""
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.4.8",
+    "env-cmd": "^8.0.2",
+    "express": "^4.16.4",
+    "google-auth-library": "^3.1.2",
+    "graphql": "^14.2.1",
+    "graphql-import": "^0.7.1",
+    "mongoose": "^5.4.22"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.4.3",
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.18.10"
+  }
+}
